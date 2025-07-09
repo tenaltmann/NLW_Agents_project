@@ -18,10 +18,8 @@ app.register(fastifyCors, {
 app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
 
-app.get('/heath', () => {
+app.get('/health', () => {
     return 'OK'
 })
 
-app.listen({ port: env.PORT}).then(() => {
-        console.log('HTTP server running! ')
-})
+app.listen({ port: env.PORT})
